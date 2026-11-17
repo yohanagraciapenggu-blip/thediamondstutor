@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Diamonds' Tutor | Learn, Grow & Shine</title>
+
+<style>
+:root {
+  --primary: #009F9A;
+  --secondary: #FF922E;
+  --light: #E8F9F6;
+  --dark: #183D3B;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #FAFFFE;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  background: var(--light);
+  border-radius: 28px;
+  padding: 75px 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.hero-text { max-width: 600px; }
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span { color: var(--primary); }
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.hero-art {
+  font-size: 120px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  background: var(--primary);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+/* SECTIONS */
+section { padding: 75px 0; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-title h2 {
+  font-size: 35px;
+  color: var(--primary);
+}
+
+.section-title p { color: #777; }
+
+/* COURSES */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #E8EEEE;
+  box-shadow: 0 5px 20px #00000008;
+  transition: .3s;
+}
+
+.course-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--primary);
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.course-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ABOUT */
+.about {
+  background: var(--light);
+  border-radius: 25px;
+  padding: 45px;
+  text-align: center;
+}
+
+.about h2 {
+  color: var(--primary);
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.feature { padding: 25px; }
+
+.feature h3 {
+  margin: 12px 0;
+  color: var(--primary);
+}
+
+/* CONTACT */
+.contact {
+  background: var(--primary);
+  color: white;
+  border-radius: 25px;
+  padding: 50px 25px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.contact p { margin-bottom: 20px; }
+
+.contact .btn {
+  background: var(--secondary);
+  margin: 7px;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* MOBILE */
+@media(max-width: 800px) {
+  .courses { grid-template-columns: repeat(2, 1fr); }
+
+  .hero {
+    padding: 45px 25px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-art { font-size: 90px; }
+
+  .features { grid-template-columns: 1fr; }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 7px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 450px) {
+  .courses { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">💎 The Diamonds' Tutor</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-text">
+    <h1>Learn, Grow & <span>Shine!</span></h1>
+    <p>
+      Building confidence through fun, creative,
+      and engaging learning experiences.
+      Let's make every lesson meaningful!
+    </p>
+    <a class="btn" href="#courses">Explore Our Classes →</a>
+  </div>
+  <div class="hero-art">💎📚✨</div>
+</div>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="section-title">
+    <h2>Explore Our Classes</h2>
+    <p>Discover your child's potential with us!</p>
+  </div>
+
+  <div class="courses">
+
+    <div class="course-card">
+      <div class="icon">🇬🇧</div>
+      <h3>English</h3>
+      <p>Reading, Writing, Speaking, Phonics & Grammar.</p>
+    </div>
+
+    <div class="course-card">
+      <div class="icon">🇨🇳</div>
+      <h3>Mandarin</h3>
+      <p>Vocabulary, Speaking, Characters & Basic Conversation.</p>
+    </div>
+
+    <div class="course-card">
+      <div class="icon">🔢</div>
+      <h3>Mathematics</h3>
+      <p>Numbers, Calculations, Logic & Problem Solving.</p>
+    </div>
+
+    <div class="course-card">
+      <div class="icon">🎓</div>
+      <h3>School Subjects</h3>
+      <p>Learning support for various school subjects.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about">
+    <h2>About The Diamonds' Tutor</h2>
+    <p>
+      We believe every child has their own unique potential.
+      Our goal is to create a positive learning environment
+      where students can explore, discover, and grow with confidence.
+    </p>
+    <br>
+    <h3>✨ Every Child Deserves to Shine! ✨</h3>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section>
+  <div class="section-title">
+    <h2>Why Learn With Us?</h2>
+    <p>A better learning experience starts here.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div style="font-size:40px">🎨</div>
+      <h3>Creative Learning</h3>
+      <p>Fun and engaging activities to make learning enjoyable.</p>
+    </div>
+
+    <div class="feature">
+      <div style="font-size:40px">💡</div>
+      <h3>Build Confidence</h3>
+      <p>Encouraging students to express themselves and grow.</p>
+    </div>
+
+    <div class="feature">
+      <div style="font-size:40px">🌟</div>
+      <h3>Personal Growth</h3>
+      <p>Supporting each student's individual learning journey.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact">
+    <h2>Let's Start Learning!</h2>
+    <p>
+      Ready to join The Diamonds' Tutor?
+      Contact us for more information!
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/6281936102575?text=Hello%20The%20Diamonds%27%20Tutor!%20I%20would%20like%20to%20ask%20about%20your%20classes."
+       target="_blank">
+       📱 WhatsApp Us
+    </a>
+
+    <a class="btn" href="tel:+6281936102575">
+       ☎ Call Us
+    </a>
+
+    <br><br>
+
+    <p>📞 0819-3610-2575</p>
+
+    <p>
+      📷 Instagram:
+      <a href="https://www.instagram.com/thediamondstutor/"
+         target="_blank">
+         @thediamondstutor
+      </a>
+    </p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>💎 The Diamonds' Tutor</p>
+  <p>Learn, Grow & Shine!</p>
+  <p>© 2026 The Diamonds' Tutor. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
